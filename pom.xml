@@ -18,8 +18,8 @@
                 <version>2.5.1</version>
                 <inherited>true</inherited>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -52,7 +52,10 @@
         -->
     </dependencies>
     <properties>
-        <jersey.version>2.23.2</jersey.version>
+        <!-- For Java 7+ -->
+        <!--<jersey.version>2.23.2</jersey.version>-->
+        <!-- For Java 6 -->
+        <jersey.version>2.6</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
