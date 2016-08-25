@@ -1,2 +1,2 @@
 # ltpa-service
-Decode user info fro LTPA token
+Decode user info from LTPA token
