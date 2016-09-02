@@ -15,4 +15,25 @@
         <servlet-name>Jersey Web Application</servlet-name>
         <url-pattern>/webapi/*</url-pattern>
     </servlet-mapping>
+
+    <!-- SECURITY ROLES -->
+    <security-role>
+        <role-name>testing</role-name>
+    </security-role>
+
+    <!-- SECURITY CONSTRAINTS -->
+    <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/testing</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>testing</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!-- AUTHENTICATION METHOD: Basic authentication -->
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
 </web-app>
