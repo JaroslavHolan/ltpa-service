@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
 public class LtpaDecoder {
     private String ltpa3DESKey = "Z+Iq9Fx3fgNoHgzPDhDJgMtf84EEqaGZZqY4rz+IY/o=";
     private String ltpaPassword = "pass";
+    private String ltpaPlaintext;
 
     private String sUserInfo = "";
     private Date dExpiry;
@@ -45,7 +46,7 @@ public class LtpaDecoder {
 
     public LtpaDecoder(String fulltoken) throws Exception {
         byte[] secretKey = getSecretKey(ltpa3DESKey, ltpaPassword);
-        String ltpaPlaintext = new String(decryptLtpaToken2(fulltoken, secretKey));
+        ltpaPlaintext = new String(decryptLtpaToken(fulltoken, secretKey));
 
 
         System.out.println("LTPA plain text = " + ltpaPlaintext);
@@ -73,6 +74,10 @@ public class LtpaDecoder {
 
     public String getUserInfo() {
         return sUserInfo;
+    }
+
+    public String getLtpaPlainText() {
+        return ltpaPlaintext;
     }
 
     public String getExpiryDate() {

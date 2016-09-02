@@ -33,7 +33,7 @@ public class LTPA {
         String response;
         try {
             LtpaDecoder ltpaDecoder = new LtpaDecoder(ltpaToken);
-            response = ltpaDecoder.getUserInfo();
+            response = ltpaDecoder.getLtpaPlainText();
         } catch (Exception e) {
             response = e.getMessage();
         }
