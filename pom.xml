@@ -61,18 +61,19 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <!-- uncomment this to get JSON support
+
         <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-moxy</artifactId>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.0.4</version>
         </dependency>
-        -->
+
     </dependencies>
     <properties>
         <!-- For Java 7+ -->
-        <!--<jersey.version>2.23.2</jersey.version>-->
+        <jersey.version>2.23.2</jersey.version>
         <!-- For Java 6 -->
-        <jersey.version>2.6</jersey.version>
+        <!--<jersey.version>2.6</jersey.version>-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
